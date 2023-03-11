@@ -1,6 +1,6 @@
 from flask_restful import Api, Resource, reqparse
 
-class HelloApiHandler(Resource):
+class detect_explict(Resource):
   def get(self):
     return {
       'resultStatus': 'SUCCESS',

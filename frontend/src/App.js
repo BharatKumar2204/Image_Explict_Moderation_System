@@ -7,12 +7,16 @@ function App() {
   const [getMessage, setGetMessage] = useState({})
 
   useEffect(()=>{
-    axios.get('https://image-explict-production.up.railway.app/flask/hello').then(response => {
+    axios.post('https://image-explict-production.up.railway.app/detect_explict',{
+      type:'image',
+      message:'you know who i am',
+    }).then(response => {
       console.log("SUCCESS", response)
       setGetMessage(response)
     }).catch(error => {
       console.log(error)
     })
+
 
   }, [])
   return (
