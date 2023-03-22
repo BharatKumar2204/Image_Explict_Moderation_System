@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+.mask1 {
+  -webkit-filter: blur(13px); 
+  filter: blur(13px); 
+}
+.main-image{
+  display: block;
+  transition: filter 0.65s linear 0s;
+  image-orientation: from-image;
+}
+.container {
+  position: relative;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+
+img { 
+  width: 100%;
+  height: auto;
+}
+
