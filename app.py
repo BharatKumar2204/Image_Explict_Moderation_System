@@ -10,7 +10,7 @@ import os
 ACCESS_KEY_ID = os.environ.get('ACCESS_KEY_ID')
 SECRET_ACCESS_KEY = os.environ.get('SECRET_ACCESS_KEY')
 
-client = boto3.client('rekognition',region_name='us-west-2',aws_access_key_id=access_key_id,aws_secret_access_key=secret_access_key )
+client = boto3.client('rekognition',region_name='us-west-2',aws_access_key_id=ACCESS_KEY_ID,aws_secret_access_key=SECRET_ACCESS_KEY )
 
 app = Flask(__name__, static_url_path='', static_folder='frontend/build')
 CORS(app) #comment this on deployment
