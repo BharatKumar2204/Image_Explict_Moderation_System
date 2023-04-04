@@ -5,9 +5,10 @@ from flask_cors import CORS
 import base64
 import json
 import boto3
+import os
 
-access_key_id='AKIA2RN6HH2WVXKWLK5W'
-secret_access_key='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'
+ACCESS_KEY_ID = os.environ.get('ACCESS_KEY_ID')
+SECRET_ACCESS_KEY = os.environ.get('SECRET_ACCESS_KEY')
 
 client = boto3.client('rekognition',region_name='us-west-2',aws_access_key_id=access_key_id,aws_secret_access_key=secret_access_key )
 
