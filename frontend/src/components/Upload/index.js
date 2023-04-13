@@ -1,7 +1,7 @@
 import React from 'react';
-import {Button,Form,InputGroup} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 import Loader from './Loader';
-import Spinner from 'react-bootstrap/Spinner'
+import DragDropFile from './DragDropFile';
 
 class Upload extends React.Component {
     
@@ -61,17 +61,12 @@ class Upload extends React.Component {
         return (
             <div>
 
-                <InputGroup className="mb-3">
-        <Form.Control
-          placeholder="Username"
-          type="file"
-          onChange={this.handleChange}
-        />
-      </InputGroup>
+              
+      <DragDropFile/>
                 {this.load?<Loader/>:
 
-                <div className="container">
-                {this.data && this.state.file && <img src={this.state.file}  alt="jeye"  className='mask1'/> }
+                <div className="container" style={{ width: "100%"}}>
+                {this.data && this.state.file && <img src={this.state.file}  alt="jeye"  className='mask1' /> }
   <div className="center">{this.data&&<Button className='p-2'>View Content</Button>}<br/>{this.message}</div>
 </div>
 }
