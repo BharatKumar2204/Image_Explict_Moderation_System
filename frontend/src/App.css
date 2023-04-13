@@ -82,8 +82,9 @@ img {
     position: relative;
   }
   img{
-    height: 11rem;
-    width: 95%;
+    min-height: 12rem;
+    max-height: 24rem;
+    max-width: 17rem;
     margin-left: auto;
   margin-right: auto;
     display: flex;
@@ -96,8 +97,9 @@ img {
 }
 @media (min-width: 768px) {
   img{
-    height: 14rem;
-    width: 24rem;
+    min-height: 16rem;
+    max-height: 20rem;
+    max-width: 36rem;
     display: flex;
     align-items: center;
     justify-content: center;
