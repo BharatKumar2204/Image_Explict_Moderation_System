@@ -27,13 +27,12 @@ def index():
     """
     # Read image from request and write to server's file system
     data = request.files['file'] 
-    data.save('save_pic.jpg')
 
     # Do something with the image e.g. transform, crop, scale, computer vision detection
     # some_function_you_want()
 
     # Return the original/manipulated image with more optional data as JSON
-    saved_img = open('save_pic.jpg', 'rb').read() # Read as binary
+    saved_img = data.read() # Read as binary
     saved_img_b64 = base64.b64encode(saved_img).decode('utf-8') # UTF-8 can be converted to JSON
     detect_explict = client.detect_moderation_labels(Image={'Bytes': saved_img})
     print(detect_explict)
