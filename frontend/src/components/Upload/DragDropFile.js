@@ -60,7 +60,7 @@ function DragDropFile() {
 
         //const data = response.json();
            
-            fetch("https://image-explict-production.up.railway.app/image", {
+            fetch("https://image-explict-moderation.onrender.com/image", {
                 method: 'POST',
                 body: formData,
                 contentType: false,
