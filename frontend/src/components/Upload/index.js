@@ -36,7 +36,7 @@ class Upload extends React.Component {
         formData.append("file", files[0]); // key - value
         
         // Send to Flask
-        const response = await fetch(`https://image-explict-production.up.railway.app/image`, {
+        const response = await fetch(`https://image-explict-moderation.onrender.com/image`, {
             method: 'POST',
             body: formData,
             contentType: false,
